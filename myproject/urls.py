@@ -17,6 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from login.views import index, create_rule
+
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path("admin/", admin.site.urls),
+    path("login/", index, name="index"),
+    path("create-rule", create_rule, name="create_rule"),
 ]
